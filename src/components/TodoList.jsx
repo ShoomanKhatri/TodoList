@@ -15,6 +15,8 @@ const TodoList = () => {
         setItems((oldItems) => {
             return [...oldItems, inputList];
         })
+
+        setInputList("");
     }
     return (
         <div className='main_div'>
@@ -22,9 +24,9 @@ const TodoList = () => {
                 <br />
                 <h1>ToDo List</h1>
                 <br />
-                <input type="text" placeholder='Add a items ' onChange={itemEvent} />
+                <input type="text" placeholder='Add a items 'value={inputList}  onChange={itemEvent} />
                 <button onClick={listOfItems}>+</button>
-                
+
                 {/* {inputList}; */}
 
                 <ol>
