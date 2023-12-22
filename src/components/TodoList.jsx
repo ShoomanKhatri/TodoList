@@ -18,22 +18,35 @@ const TodoList = () => {
 
         setInputList("");
     }
+
+
+    const deleteItems = (id) => {
+        console.log(id);
+        console.log("deleted");
+
+        setItems((oldItems) => {
+            return oldItems.filter((arrElem, index) => {
+                return index !== id
+
+            })
+        });
+    }
     return (
         <div className='main_div'>
             <div className='center_div'>
                 <br />
                 <h1>ToDo List</h1>
                 <br />
-                <input type="text" placeholder='Add a items 'value={inputList}  onChange={itemEvent} />
+                <input type="text" placeholder='Add a items ' value={inputList} onChange={itemEvent} />
                 <button onClick={listOfItems}>+</button>
 
                 {/* {inputList}; */}
 
                 <ol>
                     {/* <li>{inputList}</li> */}
-
-                    {items.map((itemval) => {
-                        return <li> {itemval} </li>
+                    {items.map((itemval, index) => {
+                        return <li className='todo_style' key={index}>
+                            <i class="fa-solid fa-circle-xmark" onClick={() => deleteItems(index)} /> &nbsp; {itemval} </li>
 
                     })
                     }

@@ -1,6 +1,6 @@
-* {
+/* * {
   background-color: violet;
-}
+} */
 
 .main_div {
   width: 100%;
@@ -19,7 +19,39 @@
   width: 400px;
   padding: 20px;
   text-align: center;
-  background-color: white;
+  background-color:white;
+}
+
+.center_div h1 {
+  color: white;
+  background-color: purple;
+  width: 100%;
+  padding: 6px 0px 2px 0px;
+  border-radius: 10px;
+  /* margin-bottom: 80px; */
+  margin-top: 0;
+  /* box-sizing: content-box; */
+
+}
+
+.center_div button {
+  background-color: purple;
+  border:none;
+  border-radius: 50%;
+  color:white;
+}
+
+input{
+  text-align: center;
+  margin-top:0px;
+  border:none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 500;
+  width:60%;
+  border-bottom: 2px solid violet;
+
+
 }
 
 
@@ -47,11 +79,24 @@ ol li {
   min-height: 40px;
   display: flex;
   align-items: center;
-  color: rgb(212, 148, 11);
+  color:orangered;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
   text-transform: capitalize;
 
 }
 
+ol li i{
+  font-size: 30px;
+  color:green;
+}
+
+
+ol li i:hover{
+  font-size: 30px;
+  color:red;
+
+}
 .todo_style {
   display: flex;
   flex-direction: row;
